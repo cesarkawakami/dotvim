@@ -1,0 +1,16 @@
+snippet f
+	function(${1}) {
+		${0}
+	}${2:;}
+
+snippet proto
+	${1:class_name}.prototype.${2:method_name} = function(${3:arguments}) {
+		${0:// body...}
+	};
+
+snippet ajsm
+	.${1:method}("${2:name}", [${3}
+		function(${4}) {
+			${5: // TODO: write something here}
+		}
+	])

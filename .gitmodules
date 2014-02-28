@@ -31,3 +31,6 @@
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/vim-kompleter"]
+	path = bundle/vim-kompleter
+	url = https://github.com/szw/vim-kompleter

@@ -52,6 +52,3 @@
 [submodule "bundle/vim-golang"]
 	path = bundle/vim-golang
 	url = https://github.com/jnwhiteh/vim-golang
-[submodule "bundle/vim-yaml"]
-	path = bundle/vim-yaml
-	url = https://github.com/stephpy/vim-yaml

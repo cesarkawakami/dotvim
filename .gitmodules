@@ -61,3 +61,6 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = git@github.com:mbbill/undotree.git
+[submodule "bundle/apiblueprint.vim"]
+	path = bundle/apiblueprint.vim
+	url = git@github.com:kylef/apiblueprint.vim.git

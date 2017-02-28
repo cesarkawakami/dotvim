@@ -215,11 +215,28 @@ command! BWnex call s:WipeBuffersWithoutFiles()
 nnoremap <leader>t :checktime<CR>:BWnex<CR>
 
 """ Better StatusLine
-highlight StatusLine ctermbg=Blue ctermfg=White
+highlight StatusLineNC
+    \ ctermbg=DarkGray
+    \ ctermfg=LightGray
+    \ guibg=#999999
+    \ guifg=White
+highlight StatusLine
+    \ ctermbg=LightBlue
+    \ ctermfg=Black
+    \ guibg=#5555ff
+    \ guifg=White
 augroup StatusLineMode
     autocmd!
-    autocmd InsertEnter * highlight StatusLine ctermbg=Red
-    autocmd InsertLeave * highlight StatusLine ctermbg=Blue ctermfg=White
+    autocmd InsertEnter * highlight StatusLine
+        \ ctermbg=Red
+        \ ctermfg=White
+        \ guibg=Red
+        \ guifg=White
+    autocmd InsertLeave * highlight StatusLine
+        \ ctermbg=LightBlue
+        \ ctermfg=Black
+        \ guibg=#5555ff
+        \ guifg=White
 augroup END
 
 """ Better moving through windows

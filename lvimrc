@@ -1,0 +1,5 @@
+augroup INSERTPROJECTNAMEHEREConfig
+    autocmd!
+    autocmd FileType javascript setlocal sts=2 sw=2
+    autocmd FileType xml setlocal sts=4 sw=4 noexpandtab
+augroup END

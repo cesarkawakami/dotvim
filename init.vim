@@ -294,8 +294,8 @@ nnoremap <silent> <leader>s vip!sort<CR>
 let g:jsx_ext_required = 0
 
 """ Syntastic
-nnoremap <silent> <leader>c :SyntasticCheck<CR>:echo "Done checking."<CR>
-nnoremap <silent> <leader>C :SyntasticReset<CR>
+nnoremap <silent> <leader>cs :SyntasticCheck<CR>:echo "Done checking."<CR>
+nnoremap <silent> <leader>cS :SyntasticReset<CR>
 
 let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_always_populate_loc_list = 1
@@ -311,6 +311,6 @@ set statusline+=\   " final space
 set statusline+=(%l:%c)
 
 """ vim-flow (default disabled, enable per project)
+nnoremap <silent> <leader>cf :FlowMake<CR>
 let g:flow#enable = 0
 let g:flow#omnifunc = 0
-set omnifunc=flowcomplete#Complete

@@ -1,11 +1,15 @@
 augroup INSERTPROJECTNAMEHEREConfig
     autocmd!
-    autocmd FileType javascript setlocal sts=2 sw=2
+    autocmd FileType javascript execute
+        \ | setlocal sts=2 sw=2
+        \ | let b:omnifunc_override = 'flowcomplete#Complete'
+    autocmd FileType json setlocal sts=2 sw=2
+    autocmd FileType html setlocal sts=2 sw=2
     autocmd FileType xml setlocal sts=4 sw=4 noexpandtab
 augroup END
 
 """ vim-javascript
-let g:javascript_plugin_flow = 1
+let g:javascript_plugin_flow = 1  " enable syntax highlighting for Flow
 
 """ Syntastic
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
@@ -17,3 +21,7 @@ let g:ctrlp_custom_ignore = {
     \ 'dir': '\v\.git$|\/node_modules$',
     \ 'file': '\/\.DS_Store$',
     \ }
+
+""" vim-flow
+let g:flow#enable = 0  " run :FlowMake on save
+let g:flow#flowpath = 'node_modules/.bin/flow'

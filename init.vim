@@ -1,3 +1,5 @@
+let g:pathogen_disabled = ['vim-localvimrc']
+
 try
     execute pathogen#infect()
 catch
@@ -34,6 +36,7 @@ set ttimeoutlen=100
 set laststatus=2
 set cursorline
 set ttyfast
+set exrc
 if !has('nvim')
     set ttymouse=xterm2
 endif
@@ -76,8 +79,8 @@ if has("gui_running")
     endif
 endif
 
-let g:localvimrc_ask = 0
-let g:localvimrc_sandbox = 0
+" let g:localvimrc_ask = 0
+" let g:localvimrc_sandbox = 0
 
 """ Creating a more hand-friendly <leader> key. Any custom mapping that depends
 """ on the leader has to be defined **after** this command
@@ -289,3 +292,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=\   " final space
 set statusline+=(%l:%c)
+
+""" vim-flow (default disabled, enable per project)
+let g:flow#enable = 0
+let g:flow#omnifunc = 0
+set omnifunc=flowcomplete#Complete

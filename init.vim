@@ -39,7 +39,7 @@ if !has('nvim')
 endif
 set mouse=a
 set t_md=
-set sessionoptions-=options
+set sessionoptions=blank,help,tabpages
 set wildmode=longest,list
 syntax on
 filetype plugin indent on

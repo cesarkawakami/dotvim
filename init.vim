@@ -134,7 +134,11 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:30'
 let g:ctrlp_switch_buffer = ''
 let g:ctrlp_regexp = 1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v\.(git|hg|svn)$|\/node_modules$',
+    \ 'file': '\v\/\.DS_Store$',
+    \ }
 "let g:ctrlp_default_input = 1
 nnoremap <leader>pp :CtrlP
 nnoremap <silent> <leader>pf :CtrlP b:current_work_dir<CR>
@@ -275,10 +279,7 @@ nnoremap <silent> <leader>C :SyntasticReset<CR>
 
 let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_always_populate_loc_list = 1
-
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec =
-    \ $HOME . '/.vim/syncheckers/javascript/node_modules/.bin/eslint'
+let g:syntastic_aggregate_errors = 1
 
 """ Status line
 set statusline=%<%f\ %h%m%r

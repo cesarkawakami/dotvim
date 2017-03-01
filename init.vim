@@ -293,14 +293,6 @@ nnoremap <silent> <leader>s vip!sort<CR>
 """ JSX
 let g:jsx_ext_required = 0
 
-""" Syntastic
-nnoremap <silent> <leader>;s :SyntasticCheck<CR>:echo "Done checking."<CR>
-nnoremap <silent> <leader>;S :SyntasticReset<CR>
-
-let g:syntastic_mode_map = { "mode": "passive" }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_aggregate_errors = 1
-
 """ Status line
 set statusline=%<%f\ %h%m%r
 set statusline+=%=
@@ -310,8 +302,22 @@ set statusline+=%*
 set statusline+=\   " final space
 set statusline+=(%l:%c)
 
+
+"""
+""" Checkers
+"""
+
+""" Common close
+nnoremap <silent> <leader>;c :SyntasticReset<CR>:cclose<CR>:echo<CR>
+
+""" Syntastic
+nnoremap <silent> <leader>;s :SyntasticCheck<CR>:echo "Done checking."<CR>
+
+let g:syntastic_mode_map = { "mode": "passive" }
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_aggregate_errors = 1
+
 """ vim-flow (default disabled, enable per project)
 nnoremap <silent> <leader>;f :FlowMake<CR>
-nnoremap <silent> <leader>;F :cclose<CR>
 let g:flow#enable = 0
 let g:flow#omnifunc = 0

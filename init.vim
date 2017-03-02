@@ -1,4 +1,4 @@
-let g:pathogen_disabled = ['vim-localvimrc']
+let g:pathogen_disabled = []
 
 try
     execute pathogen#infect()

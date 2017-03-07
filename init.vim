@@ -76,6 +76,15 @@ if has("gui_running")
         set go-=r go-=l go-=R go-=L
         set lines=50 columns=140
         set macmeta
+    elseif has("gui_win32")
+        set gfn=Droid_Sans_Mono:h10:cANSI:qDRAFT
+        set go-=r go-=l go-=R go-=L
+        set lines=50 columns=140
+
+        " disabling italic for fixed font
+        hi Comment gui=NONE
+        hi railsUserClass gui=NONE
+        hi railsUserMethod gui=NONE
     endif
 endif
 

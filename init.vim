@@ -47,6 +47,8 @@ set wildmode=longest,list
 syntax on
 filetype plugin indent on
 
+set shell=/bin/sh
+
 if has('nvim')
     set termguicolors
 endif
